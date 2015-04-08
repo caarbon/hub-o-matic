@@ -249,7 +249,7 @@ client.gists('6149ed2475f964cda3f5').comments(callback);
 client.gists('6149ed2475f964cda3f5').comments(862438, callback);
 
 // POST /gists/:gist_id/comments
-client.gists('6149ed2475f964cda3f5').comments().post(callback);
+client.gists('6149ed2475f964cda3f5').comments().post(data, callback);
 
 // PATCH /gists/:gist_id/comments/:id
 client.gists('6149ed2475f964cda3f5').comments(862438).patch(callback);
@@ -264,8 +264,18 @@ client.gists('6149ed2475f964cda3f5').comments(862438).delete(callback);
 
 ```js
 // GET /repos/:owner/:repo/git/blobs/:sha
-client.repos('caarbon').repo('hub-o-matic').blobs().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+client.repos('caarbon').repo('hub-o-matic').git().blobs().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
 
 // POST /repos/:owner/:repo/git/blobs
-client.repos('caarbon').repo('hub-o-matic').blobs().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977').post(callback);
+client.repos('caarbon').repo('hub-o-matic').git().blobs().post(data, callback);
+```
+
+#### [Commits](https://developer.github.com/v3/git/commits/)
+
+```js
+// GET /repos/:owner/:repo/git/commits/:sha
+client.repos('caarbon').repo('hub-o-matic').git().commits().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+
+// POST /repos/:owner/:repo/git/commits
+client.repos('caarbon').repo('hub-o-matic').git().commits().post(data, callback);
 ```
