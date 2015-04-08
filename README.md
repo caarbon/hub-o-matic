@@ -1060,3 +1060,19 @@ client.user().keys().post(data, callback);
 // DELETE /user/keys/:id
 client.user().keys('290420').delete(callback);
 ```
+
+### [Administration (Enterprise)](https://developer.github.com/v3/users/administration/)
+
+```js
+// PUT /users/:username/site_admin
+client.users('tmarshall').siteAdmin().put(callback);
+
+// DELETE /users/:username/site_admin
+client.users('tmarshall').siteAdmin().delete(callback);
+
+// PUT /users/:username/suspended
+client.users('tmarshall').suspended().put(callback);
+
+// DELETE /users/:username/suspended
+client.users('tmarshall').suspended().delete(callback);
+```
