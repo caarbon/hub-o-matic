@@ -38,16 +38,16 @@ It's all about chaining
 client.events(callback);
 
 // GET /repos/:owner/:repo/events
-client.repos('Caarbon').repo('hub-o-matic').events(callback);
+client.repos('caarbon').repo('hub-o-matic').events(callback);
 
 // GET /repos/:owner/:repo/issues/events
-client.repos('Caarbon').repo('hub-o-matic').issues().events(callback);
+client.repos('caarbon').repo('hub-o-matic').issues().events(callback);
 
 // GET /networks/:owner/:repo/events
-client.networks('Caarbon').repo('hub-o-matic').events(callback);
+client.networks('caarbon').repo('hub-o-matic').events(callback);
 
 // GET /orgs/:org/events
-client.orgs('Caarbon').events(callback);
+client.orgs('caarbon').events(callback);
 
 // GET /users/:username/received_events
 client.users('tmarshall').receivedEvents(callback);
@@ -62,5 +62,5 @@ client.users('tmarshall').events(callback);
 client.users('tmarshall').events().public(callback);
 
 // GET /users/:username/events/orgs/:org
-client.users('tmarshall').events().orgs('Caarbon', callback);
+client.users('tmarshall').events().orgs('caarbon', callback);
 ```
