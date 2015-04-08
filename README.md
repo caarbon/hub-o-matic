@@ -869,3 +869,23 @@ client.repos('caarbon').repo('hub-o-matic').forks(callback);
 // POST /repos/:owner/:repo/forks
 client.repos('caarbon').repo('hub-o-matic').forks().post(data, callback);
 ```
+
+#### [Merging](https://developer.github.com/v3/repos/merging/)
+
+```js
+// POST /repos/:owner/:repo/merges
+client.repos('caarbon').repo('hub-o-matic').merges().post(data, callback);
+```
+
+#### [Pages](https://developer.github.com/v3/repos/pages/)
+
+```js
+// GET /repos/:owner/:repo/pages
+client.repos('caarbon').repo('hub-o-matic').pages(callback);
+
+// GET /repos/:owner/:repo/pages/builds
+client.repos('caarbon').repo('hub-o-matic').pages().builds(callback);
+
+// GET /repos/:owner/:repo/pages/builds/latest
+client.repos('caarbon').repo('hub-o-matic').pages().builds('latest', callback);
+```
