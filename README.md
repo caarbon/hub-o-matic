@@ -814,3 +814,19 @@ client.repos('caarbon').repo('hub-o-matic').contents('lib/index.js').delete(call
 // GET /repos/:owner/:repo/:archive_format/:ref
 client.repos('caarbon').repo('hub-o-matic').archiveFormat('tarball').ref('master', callback);
 ```
+
+#### [Deploy Keys](https://developer.github.com/v3/repos/keys/)
+
+```js
+// GET /repos/:owner/:repo/keys
+client.repos('caarbon').repo('hub-o-matic').keys(callback);
+
+// GET /repos/:owner/:repo/keys/:id
+client.repos('caarbon').repo('hub-o-matic').keys(8427, callback);
+
+// POST /repos/:owner/:repo/keys
+client.repos('caarbon').repo('hub-o-matic').keys().post(data, callback);
+
+// DELETE /repos/:owner/:repo/keys/:id
+client.repos('caarbon').repo('hub-o-matic').keys(8427).delete(callback);
+```
