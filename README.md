@@ -792,3 +792,25 @@ client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295a
 // GET /repos/:owner/:repo/compare/:base...:head
 client.repos('caarbon').repo('hub-o-matic').compare(':base...:head', callback);
 ```
+
+#### [Contents](https://developer.github.com/v3/repos/contents/)
+
+```js
+// GET /repos/:owner/:repo/readme
+client.repos('caarbon').repo('hub-o-matic').readme(callback);
+
+// GET /repos/:owner/:repo/contents/:path
+client.repos('caarbon').repo('hub-o-matic').contents('lib', callback);
+
+// PUT /repos/:owner/:repo/contents/:path
+client.repos('caarbon').repo('hub-o-matic').contents('lib').put(data, callback);
+
+// PUT /repos/:owner/:repo/contents/:path
+client.repos('caarbon').repo('hub-o-matic').contents('lib/index.js').put(data, callback);
+
+// DELETE /repos/:owner/:repo/contents/:path
+client.repos('caarbon').repo('hub-o-matic').contents('lib/index.js').delete(callback);
+
+// GET /repos/:owner/:repo/:archive_format/:ref
+client.repos('caarbon').repo('hub-o-matic').archiveFormat('tarball').ref('master', callback);
+```
