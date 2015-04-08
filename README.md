@@ -941,4 +941,20 @@ client.repos('caarbon').repo('hub-o-matic').stats().codeFrequency(callback);
 
 // GET /repos/:owner/:repo/stats/participation
 client.repos('caarbon').repo('hub-o-matic').stats().participation(callback);
+
+// GET /repos/:owner/:repo/stats/punch_card
+client.repos('caarbon').repo('hub-o-matic').stats().punchCard(callback);
+```
+
+#### [Statuses](https://developer.github.com/v3/repos/statuses/)
+
+```js
+// POST /repos/:owner/:repo/statuses/:sha
+client.repos('caarbon').repo('hub-o-matic').statuses('2c92055c4467fe31bd321f6295ad6953b6f1f977').post(data, callback);
+
+// GET /repos/:owner/:repo/commits/:ref/statuses
+client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977').statuses(callback);
+
+// GET /repos/:owner/:repo/commits/:ref/status
+client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977').status(callback);
 ```
