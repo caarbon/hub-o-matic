@@ -121,3 +121,10 @@ client.user().starred('tmarshall').repo('hub-o-matic').put(callback);
 // DELETE /user/starred/:owner/:repo
 client.user().starred('tmarshall').repo('hub-o-matic').delete(callback);
 ```
+
+#### [Watching](https://developer.github.com/v3/activity/watching/)
+
+```js
+// GET /repos/:owner/:repo/subscribers
+client.repos('caarbon').repo('hub-o-matic').subscribers(callback);
+```
