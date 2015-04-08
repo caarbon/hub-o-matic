@@ -252,7 +252,7 @@ client.gists('6149ed2475f964cda3f5').comments(862438, callback);
 client.gists('6149ed2475f964cda3f5').comments().post(data, callback);
 
 // PATCH /gists/:gist_id/comments/:id
-client.gists('6149ed2475f964cda3f5').comments(862438).patch(callback);
+client.gists('6149ed2475f964cda3f5').comments(862438).patch(data, callback);
 
 // DELETE /gists/:gist_id/comments/:id
 client.gists('6149ed2475f964cda3f5').comments(862438).delete(callback);
@@ -278,4 +278,29 @@ client.repos('caarbon').repo('hub-o-matic').git().commits().sha('2c92055c4467fe3
 
 // POST /repos/:owner/:repo/git/commits
 client.repos('caarbon').repo('hub-o-matic').git().commits().post(data, callback);
+```
+
+#### [References](https://developer.github.com/v3/git/refs/)
+
+```js
+// GET /repos/:owner/:repo/git/refs/:ref
+client.repos('caarbon').repo('hub-o-matic').git().refs('skunkworkz/feature', callback);
+
+// GET /repos/:owner/:repo/git/refs
+client.repos('caarbon').repo('hub-o-matic').git().refs(callback);
+
+// GET /repos/:owner/:repo/git/refs/tags
+client.repos('caarbon').repo('hub-o-matic').git().refs().tags(callback);
+
+// POST /repos/:owner/:repo/git/refs
+client.repos('caarbon').repo('hub-o-matic').git().refs().post(data, callback);
+
+// PATCH /repos/:owner/:repo/git/refs/:ref
+client.repos('caarbon').repo('hub-o-matic').git().refs('skunkworkz/feature').patch(data, callback);
+
+// DELETE /repos/:owner/:repo/git/refs/:ref
+client.repos('caarbon').repo('hub-o-matic').git().refs('skunkworkz/feature').delete(callback);
+
+// DELETE /repos/:owner/:repo/git/refs/tags/:id
+client.repos('caarbon').repo('hub-o-matic').git().refs().tags(862438).delete(callback);
 ```
