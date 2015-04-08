@@ -316,6 +316,7 @@ client.repos('caarbon').repo('hub-o-matic').git().tags().post(callback);
 ```
 
 #### [Trees](https://developer.github.com/v3/git/trees/)
+
 ```js
 // GET /repos/:owner/:repo/git/trees/:sha
 client.repos('caarbon').repo('hub-o-matic').git().trees().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
@@ -325,4 +326,29 @@ client.repos('caarbon').repo('hub-o-matic').git().trees().sha('2c92055c4467fe31b
 
 // POST /repos/:owner/:repo/git/trees
 client.repos('caarbon').repo('hub-o-matic').git().trees().post(data, callback);
+```
+
+### [Issues](https://developer.github.com/v3/issues/)
+
+```js
+// GET /issues
+client.issues(callback);
+
+// GET /user/issues
+client.user().issues(callback);
+
+// GET /orgs/:org/issues
+client.orgs('caarbon').issues(callback);
+
+// GET /repos/:owner/:repo/issues
+client.repos('caarbon').repo('hub-o-matic').issues(callback);
+
+// GET /repos/:owner/:repo/issues/:number
+client.repos('caarbon').repo('hub-o-matic').issues(456, callback);
+
+// POST /repos/:owner/:repo/issues
+client.repos('caarbon').repo('hub-o-matic').issues().post(data, callback);
+
+// PATCH /repos/:owner/:repo/issues/:number
+client.repos('caarbon').repo('hub-o-matic').issues(456).patch(data, callback);
 ```
