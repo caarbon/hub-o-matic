@@ -46,6 +46,12 @@ if you'd like to be consistent with the syntax, you can write the GET as
 client.user().subscriptions('tmarshall').repo('hub-o-matic').get(callback);
 ```
 
+### Request methods
+
+On any chain, you can end it with `get`, `post`, `put`, `patch`, `delete` or `head`.
+
+You can pass `data, callback`, just `callback`, just `data`, or nothing at all.
+
 ### [Activity](https://developer.github.com/v3/activity/)
 
 #### [Events](https://developer.github.com/v3/activity/events/)
@@ -168,4 +174,53 @@ client.user().subscriptions('tmarshall').repo('hub-o-matic', callback);
 
 // PUT /user/subscriptions/:owner/:repo
 client.user().subscriptions('tmarshall').repo('hub-o-matic').put(callback);
+```
+
+### [Gists](https://developer.github.com/v3/gists/)
+
+```js
+// GET /users/:username/gists
+client.users('tmarshall').gists(callback);
+
+// GET /gists
+client.gists(callback);
+
+// GET /gists/public
+client.gists.public(callback);
+
+// GET /gists/starred
+client.gists.starred(callback);
+
+// GET /gists/:id
+client.gists('6149ed2475f964cda3f5', callback);
+
+// GET /gists/:id/:sha
+client.gists('6149ed2475f964cda3f5').sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+
+// POST /gists
+client.gists().post(data, callback);
+
+// PATCH /gists/:id
+client.gists('6149ed2475f964cda3f5').patch(data, callback);
+
+// GET /gists/:id/commits
+client.gists('6149ed2475f964cda3f5').commits(callback);
+
+// PUT /gists/:id/star
+client.gists('6149ed2475f964cda3f5').star().put(callback);
+
+// DELETE /gists/:id/star
+client.gists('6149ed2475f964cda3f5').star().delete(callback);
+
+// GET /gists/:id/star
+client.gists('6149ed2475f964cda3f5').star(callback);
+
+// POST /gists/:id/forks
+client.gists('6149ed2475f964cda3f5').forks().post(callback);
+
+// GET /gists/:id/forks
+client.gists('6149ed2475f964cda3f5').forks(callback);
+
+// DELETE /gists/:id
+client.gists('6149ed2475f964cda3f5').delete(callback);
 ```
