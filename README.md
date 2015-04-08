@@ -620,3 +620,25 @@ client.teams(2502).repos('caarbon').repo('hub-o-matic').delete(callback);
 // GET /user/teams
 client.user().teams(callback);
 ```
+
+#### [Webhooks](https://developer.github.com/v3/orgs/hooks/)
+
+```js
+// GET /orgs/:org/hooks
+client.orgs('caarbon').hooks(callback);
+
+// GET /orgs/:org/hooks/:id
+client.orgs('caarbon').hooks(7427, callback);
+
+// POST /orgs/:org/hooks
+client.orgs('caarbon').hooks().post(data, callback);
+
+// PATCH /orgs/:org/hooks/:id
+client.orgs('caarbon').hooks(7427).patch(data, callback);
+
+// POST /orgs/:org/hooks/:id/pings
+client.orgs('caarbon').hooks(7427).post(callback);
+
+// DELETE /orgs/:org/hooks/:id
+client.orgs('caarbon').hooks(7427).delete(callback);
+```
