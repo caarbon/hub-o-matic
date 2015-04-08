@@ -224,3 +224,22 @@ client.gists('6149ed2475f964cda3f5').forks(callback);
 // DELETE /gists/:id
 client.gists('6149ed2475f964cda3f5').delete(callback);
 ```
+
+#### [Comments](https://developer.github.com/v3/gists/comments/)
+
+```js
+// GET /gists/:gist_id/comments
+client.gists('6149ed2475f964cda3f5').comments(callback);
+
+// GET /gists/:gist_id/comments/:id
+client.gists('6149ed2475f964cda3f5').comments(862438, callback);
+
+// POST /gists/:gist_id/comments
+client.gists('6149ed2475f964cda3f5').comments().post(callback);
+
+// PATCH /gists/:gist_id/comments/:id
+client.gists('6149ed2475f964cda3f5').comments(862438).patch(callback);
+
+// DELETE /gists/:gist_id/comments/:id
+client.gists('6149ed2475f964cda3f5').comments(862438).delete(callback);
+```
