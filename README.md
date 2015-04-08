@@ -79,16 +79,16 @@ client.notifications(callback);
 client.repos('caarbon').repo('hub-o-matic').notifications(callback);
 
 // PUT /notifications
-client.notifications().put(null, callback);
+client.notifications().put(callback);
 
 // PUT /repos/:owner/:repo/notifications
-client.repos('caarbon').repo('hub-o-matic').notifications().put(null, callback);
+client.repos('caarbon').repo('hub-o-matic').notifications().put(callback);
 
 // GET /notifications/threads/:id
 client.notifications().threads('threadid', callback);
 
 // PATCH /notifications/threads/:id
-client.notifications().threads('threadid', callback).patch(null, callback);
+client.notifications().threads('threadid', callback).patch(callback);
 
 // GET /notifications/threads/:id/subscription
 client.notifications().threads('threadid').subscription(callback);
@@ -97,5 +97,5 @@ client.notifications().threads('threadid').subscription(callback);
 client.notifications().threads('threadid').subscription().put(data, callback);
 
 // DELETE /notifications/threads/:id/subscription
-client.notifications().threads('threadid').subscription().delete(data, callback);
+client.notifications().threads('threadid').subscription().delete(callback);
 ```
