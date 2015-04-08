@@ -1076,3 +1076,10 @@ client.users('tmarshall').suspended().put(callback);
 // DELETE /users/:username/suspended
 client.users('tmarshall').suspended().delete(callback);
 ```
+
+### [Admin Stats (Enterprise 2.1)](https://developer.github.com/v3/enterprise/admin_stats/)
+
+```js
+// GET /enterprise/stats/:type
+client.enterprise().stats('type', callback);
+```
