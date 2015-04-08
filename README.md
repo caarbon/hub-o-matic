@@ -926,3 +926,19 @@ client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101).
 // DELETE /repos/:owner/:repo/releases/assets/:id
 client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101).delete(callback);
 ```
+
+#### [Statistics](https://developer.github.com/v3/repos/statistics/)
+
+```js
+// GET /repos/:owner/:repo/stats/contributors
+client.repos('caarbon').repo('hub-o-matic').stats().contributors(callback);
+
+// GET /repos/:owner/:repo/stats/commit_activity
+client.repos('caarbon').repo('hub-o-matic').stats().commitActivity(callback);
+
+// GET /repos/:owner/:repo/stats/code_frequency
+client.repos('caarbon').repo('hub-o-matic').stats().codeFrequency(callback);
+
+// GET /repos/:owner/:repo/stats/participation
+client.repos('caarbon').repo('hub-o-matic').stats().participation(callback);
+```
