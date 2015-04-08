@@ -66,9 +66,7 @@ On any chain, you can end it with `get`, `post`, `put`, `patch`, `delete` or `he
 
 You can pass `data, callback`, just `callback`, just `data`, or nothing at all.
 
-### [Activity](https://developer.github.com/v3/activity/)
-
-#### [Events](https://developer.github.com/v3/activity/events/)
+### [Events](https://developer.github.com/v3/activity/events/)
 
 ```js
 // GET /events
@@ -102,14 +100,14 @@ client.users('tmarshall').events().public(callback);
 client.users('tmarshall').events().orgs('caarbon', callback);
 ```
 
-#### [Feeds](https://developer.github.com/v3/activity/feeds/)
+### [Feeds](https://developer.github.com/v3/activity/feeds/)
 
 ```js
 // GET /feeds
 client.feeds(callback);
 ```
 
-#### [Notifications](https://developer.github.com/v3/activity/notifications/)
+### [Notifications](https://developer.github.com/v3/activity/notifications/)
 
 ```js
 // GET /notifications
@@ -140,7 +138,7 @@ client.notifications().threads(63832640).subscription().put(data, callback);
 client.notifications().threads(63832640).subscription().delete(callback);
 ```
 
-#### [Starring](https://developer.github.com/v3/activity/starring/)
+### [Starring](https://developer.github.com/v3/activity/starring/)
 
 ```js
 // GET /repos/:owner/:repo/stargazers
@@ -162,7 +160,7 @@ client.user().starred('tmarshall').repo('hub-o-matic').put(callback);
 client.user().starred('tmarshall').repo('hub-o-matic').delete(callback);
 ```
 
-#### [Watching](https://developer.github.com/v3/activity/watching/)
+### [Watching](https://developer.github.com/v3/activity/watching/)
 
 ```js
 // GET /repos/:owner/:repo/subscribers
@@ -239,7 +237,7 @@ client.gists('6149ed2475f964cda3f5').forks(callback);
 client.gists('6149ed2475f964cda3f5').delete(callback);
 ```
 
-#### [Comments](https://developer.github.com/v3/gists/comments/)
+### [Comments](https://developer.github.com/v3/gists/comments/)
 
 ```js
 // GET /gists/:gist_id/comments
@@ -258,9 +256,7 @@ client.gists('6149ed2475f964cda3f5').comments(862438).patch(data, callback);
 client.gists('6149ed2475f964cda3f5').comments(862438).delete(callback);
 ```
 
-### [Git Data](https://developer.github.com/v3/git/)
-
-#### [Blobs](https://developer.github.com/v3/git/blobs/)
+### [Blobs](https://developer.github.com/v3/git/blobs/)
 
 ```js
 // GET /repos/:owner/:repo/git/blobs/:sha
@@ -270,7 +266,7 @@ client.repos('caarbon').repo('hub-o-matic').git().blobs().sha('2c92055c4467fe31b
 client.repos('caarbon').repo('hub-o-matic').git().blobs().post(data, callback);
 ```
 
-#### [Commits](https://developer.github.com/v3/git/commits/)
+### [Commits](https://developer.github.com/v3/git/commits/)
 
 ```js
 // GET /repos/:owner/:repo/git/commits/:sha
@@ -280,7 +276,7 @@ client.repos('caarbon').repo('hub-o-matic').git().commits().sha('2c92055c4467fe3
 client.repos('caarbon').repo('hub-o-matic').git().commits().post(data, callback);
 ```
 
-#### [References](https://developer.github.com/v3/git/refs/)
+### [References](https://developer.github.com/v3/git/refs/)
 
 ```js
 // GET /repos/:owner/:repo/git/refs/:ref
@@ -305,7 +301,7 @@ client.repos('caarbon').repo('hub-o-matic').git().refs('skunkworkz/feature').del
 client.repos('caarbon').repo('hub-o-matic').git().refs().tags(862438).delete(callback);
 ```
 
-#### [Tags](https://developer.github.com/v3/git/tags/)
+### [Tags](https://developer.github.com/v3/git/tags/)
 
 ```js
 // GET /repos/:owner/:repo/git/tags/:sha
@@ -315,7 +311,7 @@ client.repos('caarbon').repo('hub-o-matic').git().tags().sha('2c92055c4467fe31bd
 client.repos('caarbon').repo('hub-o-matic').git().tags().post(callback);
 ```
 
-#### [Trees](https://developer.github.com/v3/git/trees/)
+### [Trees](https://developer.github.com/v3/git/trees/)
 
 ```js
 // GET /repos/:owner/:repo/git/trees/:sha
@@ -353,7 +349,7 @@ client.repos('caarbon').repo('hub-o-matic').issues().post(data, callback);
 client.repos('caarbon').repo('hub-o-matic').issues(456).patch(data, callback);
 ```
 
-#### [Assignees](https://developer.github.com/v3/issues/assignees/)
+### [Assignees](https://developer.github.com/v3/issues/assignees/)
 
 ```js
 // GET /repos/:owner/:repo/assignees
@@ -363,7 +359,7 @@ client.repos('caarbon').repo('hub-o-matic').assignees(callback);
 client.repos('caarbon').repo('hub-o-matic').assignees('tmarshall', callback);
 ```
 
-#### [Comments](https://developer.github.com/v3/issues/comments/)
+### [Comments](https://developer.github.com/v3/issues/comments/)
 
 ```js
 // GET /repos/:owner/:repo/issues/:number/comments
@@ -385,7 +381,7 @@ client.repos('caarbon').repo('hub-o-matic').issues().comments(436201).patch(data
 client.repos('caarbon').repo('hub-o-matic').issues().comments(436201).delete(callback);
 ```
 
-#### [Events](https://developer.github.com/v3/issues/events/)
+### [Events](https://developer.github.com/v3/issues/events/)
 
 ```js
 // GET /repos/:owner/:repo/issues/:issue_number/events
@@ -398,7 +394,7 @@ client.repos('caarbon').repo('hub-o-matic').issues().events(callback);
 client.repos('caarbon').repo('hub-o-matic').issues().events(8284205, callback);
 ```
 
-#### [Labels](https://developer.github.com/v3/issues/labels/)
+### [Labels](https://developer.github.com/v3/issues/labels/)
 
 ```js
 // GET /repos/:owner/:repo/labels
@@ -435,7 +431,7 @@ client.repos('caarbon').repo('hub-o-matic').issues(456).labels().delete(callback
 client.repos('caarbon').repo('hub-o-matic').milestones(8420).labels(callback);
 ```
 
-#### [Milestones](https://developer.github.com/v3/issues/milestones/)
+### [Milestones](https://developer.github.com/v3/issues/milestones/)
 
 ```js
 // GET /repos/:owner/:repo/milestones
@@ -454,16 +450,14 @@ client.repos('caarbon').repo('hub-o-matic').milestones(8420).patch(data, callbac
 client.repos('caarbon').repo('hub-o-matic').milestones(8420).delete(callback);
 ```
 
-### [Miscellaneous](https://developer.github.com/v3/misc/)
-
-#### [Emojis](https://developer.github.com/v3/emojis/)
+### [Emojis](https://developer.github.com/v3/emojis/)
 
 ```js
 // GET /emojis
 client.emojis(callback);
 ```
 
-#### [Gitignore](https://developer.github.com/v3/gitignore/)
+### [Gitignore](https://developer.github.com/v3/gitignore/)
 
 ```js
 // GET /gitignore/templates
@@ -473,7 +467,7 @@ client.gitignore().templates(callback);
 client.gitignore().templates('C', callback);
 ```
 
-#### [Licenses](https://developer.github.com/v3/licenses/)
+### [Licenses](https://developer.github.com/v3/licenses/)
 
 ```js
 // GET /licenses
@@ -486,7 +480,7 @@ client.licenses('mit', callback);
 client.repos('caarbon').repo('hub-o-matic', callback);
 ```
 
-#### [Markdown](https://developer.github.com/v3/markdown/)
+### [Markdown](https://developer.github.com/v3/markdown/)
 
 ```js
 // POST /markdown
@@ -496,14 +490,14 @@ client.markdown().post(data, callback);
 client.markdown('raw').post(data, callback);
 ```
 
-#### [Meta](https://developer.github.com/v3/meta/)
+### [Meta](https://developer.github.com/v3/meta/)
 
 ```js
 // GET /meta
 client.meta(callback);
 ```
 
-#### [Rate Limit](https://developer.github.com/v3/rate_limit/)
+### [Rate Limit](https://developer.github.com/v3/rate_limit/)
 
 ```js
 // GET /rate_limit
@@ -526,7 +520,7 @@ client.orgs('caarbon', callback);
 client.orgs('caarbon').patch(data, callback);
 ```
 
-#### [Members](https://developer.github.com/v3/orgs/members/)
+### [Members](https://developer.github.com/v3/orgs/members/)
 
 ```js
 // GET /orgs/:org/members
@@ -569,7 +563,7 @@ client.user().memberships().orgs('caarbon', callback);
 client.user().memberships().orgs('caarbon').patch(data, callback);
 ```
 
-#### [Teams](https://developer.github.com/v3/orgs/teams/)
+### [Teams](https://developer.github.com/v3/orgs/teams/)
 
 ```js
 // GET /orgs/:org/teams
@@ -621,7 +615,7 @@ client.teams(2502).repos('caarbon').repo('hub-o-matic').delete(callback);
 client.user().teams(callback);
 ```
 
-#### [Webhooks](https://developer.github.com/v3/orgs/hooks/)
+### [Webhooks](https://developer.github.com/v3/orgs/hooks/)
 
 ```js
 // GET /orgs/:org/hooks
@@ -671,7 +665,7 @@ client.repos('caarbon').repo('hub-o-matic').pulls(28).merge(callback);
 client.repos('caarbon').repo('hub-o-matic').pulls(28).merge().put(data, callback);
 ```
 
-#### [Review Comments](https://developer.github.com/v3/pulls/comments/)
+### [Review Comments](https://developer.github.com/v3/pulls/comments/)
 
 ```js
 // GET /repos/:owner/:repo/pulls/:number/comments
@@ -742,7 +736,7 @@ client.repos('caarbon').repo('hub-o-matic').branches('fix/things', callback);
 client.repos('caarbon').repo('hub-o-matic').delete(callback);
 ```
 
-#### [Collaborators](https://developer.github.com/v3/repos/collaborators/)
+### [Collaborators](https://developer.github.com/v3/repos/collaborators/)
 
 ```js
 // GET /repos/:owner/:repo/collaborators
@@ -758,7 +752,7 @@ client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall').put(callb
 client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall').delete(callback);
 ```
 
-#### [Comments](https://developer.github.com/v3/repos/comments/)
+### [Comments](https://developer.github.com/v3/repos/comments/)
 
 ```js
 // GET /repos/:owner/:repo/comments
@@ -780,7 +774,7 @@ client.repos('caarbon').repo('hub-o-matic').comments(862438).patch(data, callbac
 client.repos('caarbon').repo('hub-o-matic').comments(862438).delete(callback);
 ```
 
-#### [Commits](https://developer.github.com/v3/repos/commits/)
+### [Commits](https://developer.github.com/v3/repos/commits/)
 
 ```js
 // GET /repos/:owner/:repo/commits
@@ -793,7 +787,7 @@ client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295a
 client.repos('caarbon').repo('hub-o-matic').compare(':base...:head', callback);
 ```
 
-#### [Contents](https://developer.github.com/v3/repos/contents/)
+### [Contents](https://developer.github.com/v3/repos/contents/)
 
 ```js
 // GET /repos/:owner/:repo/readme
@@ -815,7 +809,7 @@ client.repos('caarbon').repo('hub-o-matic').contents('lib/index.js').delete(call
 client.repos('caarbon').repo('hub-o-matic').archiveFormat('tarball').ref('master', callback);
 ```
 
-#### [Deploy Keys](https://developer.github.com/v3/repos/keys/)
+### [Deploy Keys](https://developer.github.com/v3/repos/keys/)
 
 ```js
 // GET /repos/:owner/:repo/keys
@@ -831,7 +825,7 @@ client.repos('caarbon').repo('hub-o-matic').keys().post(data, callback);
 client.repos('caarbon').repo('hub-o-matic').keys(8427).delete(callback);
 ```
 
-#### [Deployments](https://developer.github.com/v3/repos/deployments/)
+### [Deployments](https://developer.github.com/v3/repos/deployments/)
 
 ```js
 // GET /repos/:owner/:repo/deployments
@@ -847,7 +841,7 @@ client.repos('caarbon').repo('hub-o-matic').deployments(173343).statuses(callbac
 client.repos('caarbon').repo('hub-o-matic').deployments(173343).statuses().post(data, callback);
 ```
 
-#### [Downloads](https://developer.github.com/v3/repos/downloads/)
+### [Downloads](https://developer.github.com/v3/repos/downloads/)
 
 ```js
 // GET /repos/:owner/:repo/downloads
@@ -860,7 +854,7 @@ client.repos('caarbon').repo('hub-o-matic').downloads(9429211, callback);
 client.repos('caarbon').repo('hub-o-matic').downloads(9429211).delete(callback);
 ```
 
-#### [Forks](https://developer.github.com/v3/repos/forks/)
+### [Forks](https://developer.github.com/v3/repos/forks/)
 
 ```js
 // GET /repos/:owner/:repo/forks
@@ -870,14 +864,14 @@ client.repos('caarbon').repo('hub-o-matic').forks(callback);
 client.repos('caarbon').repo('hub-o-matic').forks().post(data, callback);
 ```
 
-#### [Merging](https://developer.github.com/v3/repos/merging/)
+### [Merging](https://developer.github.com/v3/repos/merging/)
 
 ```js
 // POST /repos/:owner/:repo/merges
 client.repos('caarbon').repo('hub-o-matic').merges().post(data, callback);
 ```
 
-#### [Pages](https://developer.github.com/v3/repos/pages/)
+### [Pages](https://developer.github.com/v3/repos/pages/)
 
 ```js
 // GET /repos/:owner/:repo/pages
@@ -890,7 +884,7 @@ client.repos('caarbon').repo('hub-o-matic').pages().builds(callback);
 client.repos('caarbon').repo('hub-o-matic').pages().builds('latest', callback);
 ```
 
-#### [Releases](https://developer.github.com/v3/repos/releases/)
+### [Releases](https://developer.github.com/v3/repos/releases/)
 
 ```js
 // GET /repos/:owner/:repo/releases
@@ -927,7 +921,7 @@ client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101).
 client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101).delete(callback);
 ```
 
-#### [Statistics](https://developer.github.com/v3/repos/statistics/)
+### [Statistics](https://developer.github.com/v3/repos/statistics/)
 
 ```js
 // GET /repos/:owner/:repo/stats/contributors
@@ -946,7 +940,7 @@ client.repos('caarbon').repo('hub-o-matic').stats().participation(callback);
 client.repos('caarbon').repo('hub-o-matic').stats().punchCard(callback);
 ```
 
-#### [Statuses](https://developer.github.com/v3/repos/statuses/)
+### [Statuses](https://developer.github.com/v3/repos/statuses/)
 
 ```js
 // POST /repos/:owner/:repo/statuses/:sha
@@ -975,7 +969,7 @@ client.search('issues', callback);
 client.search('users', callback);
 ```
 
-#### [Legacy Search](https://developer.github.com/v3/search/legacy/)
+### [Legacy Search](https://developer.github.com/v3/search/legacy/)
 
 ```js
 // GET /legacy/issues/search/:owner/:repository/:state/:keyword
@@ -1005,4 +999,17 @@ client.user().patch(data, callback);
 
 // GET /users
 client.users(callback);
+```
+
+### [Emails](https://developer.github.com/v3/users/emails/)
+
+```js
+// GET /user/emails
+client.user('emails', callback);
+
+// POST /user/emails
+client.user('emails').post(data, callback);
+
+// DELETE /user/emails
+client.user('emails').delete(data, callback);
 ```
