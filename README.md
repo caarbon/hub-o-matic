@@ -2,6 +2,12 @@
 
 Hub-o-Matic is a Node wrapper for the GitHub V3 API.
 
+## NPM
+
+```
+npm install hub-o-matic --save
+```
+
 ## Usage
 
 ```js
