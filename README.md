@@ -9,6 +9,20 @@ var HubOMatic = require('hub-o-matic');
 var client = HubOMatic(process.env.GITHUB_TOKEN);
 ```
 
+Or, if you need to be fancy
+
+```js
+var HubOMatic = require('hub-o-matic');
+var client = HubOMatic({
+  token: process.env.GITHUB_TOKEN),
+  domain: 'https://{hostname}/api/v3/',
+  agent: 'hub-o-matic',
+  headers: {
+    Some: 'Header'
+  }
+});
+```
+
 ### Callbacks
 
 All callbacks receive three arugments.
