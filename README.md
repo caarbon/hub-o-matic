@@ -397,3 +397,40 @@ client.repos('caarbon').repo('hub-o-matic').issues().events(callback);
 // GET /repos/:owner/:repo/issues/events/:id
 client.repos('caarbon').repo('hub-o-matic').issues().events(8284205, callback);
 ```
+
+#### [Labels](https://developer.github.com/v3/issues/labels/)
+
+```js
+// GET /repos/:owner/:repo/labels
+client.repos('caarbon').repo('hub-o-matic').labels(callback);
+
+// GET /repos/:owner/:repo/labels/:name
+client.repos('caarbon').repo('hub-o-matic').labels('P0', callback);
+
+// POST /repos/:owner/:repo/labels
+client.repos('caarbon').repo('hub-o-matic').labels().post(data, callback);
+
+// PATCH /repos/:owner/:repo/labels/:name
+client.repos('caarbon').repo('hub-o-matic').labels('P0').patch(data, callback);
+
+// DELETE /repos/:owner/:repo/labels/:name
+client.repos('caarbon').repo('hub-o-matic').labels('P0').delete(callback);
+
+// GET /repos/:owner/:repo/issues/:number/labels
+client.repos('caarbon').repo('hub-o-matic').issues(456).labels(callback);
+
+// POST /repos/:owner/:repo/issues/:number/labels
+client.repos('caarbon').repo('hub-o-matic').issues(456).labels().post(data, callback);
+
+// DELETE /repos/:owner/:repo/issues/:number/labels/:name
+client.repos('caarbon').repo('hub-o-matic').issues(456).labels('P0').delete(callback);
+
+// PUT /repos/:owner/:repo/issues/:number/labels
+client.repos('caarbon').repo('hub-o-matic').issues(456).labels().put(data, callback);
+
+// DELETE /repos/:owner/:repo/issues/:number/labels
+client.repos('caarbon').repo('hub-o-matic').issues(456).labels().delete(callback);
+
+// GET /repos/:owner/:repo/milestones/:number/labels
+client.repos('caarbon').repo('hub-o-matic').milestones(8420).labels(callback);
+```
