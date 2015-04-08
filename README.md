@@ -502,3 +502,10 @@ client.markdown('raw').post(data, callback);
 // GET /meta
 client.meta(callback);
 ```
+
+#### [Rate Limit](https://developer.github.com/v3/rate_limit/)
+
+```js
+// GET /rate_limit
+client.rateLimit(callback);
+```
