@@ -472,3 +472,16 @@ client.gitignore().templates(callback);
 // GET /gitignore/templates/C
 client.gitignore().templates('C', callback);
 ```
+
+#### [Licenses](https://developer.github.com/v3/licenses/)
+
+```js
+// GET /licenses
+client.licenses(callback);
+
+// GET /licenses/mit
+client.licenses('mit', callback);
+
+// GET /repos/:owner/:repo
+client.repos('caarbon').repo('hub-o-matic', callback);
+```
