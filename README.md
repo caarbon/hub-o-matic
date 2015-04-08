@@ -757,3 +757,25 @@ client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall').put(callb
 // DELETE /repos/:owner/:repo/collaborators/:username
 client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall').delete(callback);
 ```
+
+#### [Comments](https://developer.github.com/v3/repos/comments/)
+
+```js
+// GET /repos/:owner/:repo/comments
+client.repos('caarbon').repo('hub-o-matic').comments(callback);
+
+// GET /repos/:owner/:repo/commits/:ref/comments
+client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977').comments(callback);
+
+// POST /repos/:owner/:repo/commits/:sha/comments
+client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977').comments().post(data, callback);
+
+// GET /repos/:owner/:repo/comments/:id
+client.repos('caarbon').repo('hub-o-matic').comments(862438, callback);
+
+// PATCH /repos/:owner/:repo/comments/:id
+client.repos('caarbon').repo('hub-o-matic').comments(862438).patch(data, callback);
+
+// DELETE /repos/:owner/:repo/comments/:id
+client.repos('caarbon').repo('hub-o-matic').comments(862438).delete(callback);
+```
