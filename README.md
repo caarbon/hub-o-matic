@@ -642,3 +642,31 @@ client.orgs('caarbon').hooks(7427).post(callback);
 // DELETE /orgs/:org/hooks/:id
 client.orgs('caarbon').hooks(7427).delete(callback);
 ```
+
+### [Pull Requests](https://developer.github.com/v3/pulls/)
+
+```js
+// GET /repos/:owner/:repo/pulls
+client.repos('caarbon').repo('hub-o-matic').pulls(callback);
+
+// GET /repos/:owner/:repo/pulls/:number
+client.repos('caarbon').repo('hub-o-matic').pulls(28, callback);
+
+// POST /repos/:owner/:repo/pulls
+client.repos('caarbon').repo('hub-o-matic').pulls().post(data, callback);
+
+// PATCH /repos/:owner/:repo/pulls/:number
+client.repos('caarbon').repo('hub-o-matic').pulls(28).patch(data, callback);
+
+// GET /repos/:owner/:repo/pulls/:number/commits
+client.repos('caarbon').repo('hub-o-matic').pulls(28).commits(callback);
+
+// GET /repos/:owner/:repo/pulls/:number/files
+client.repos('caarbon').repo('hub-o-matic').pulls(28).files(callback);
+
+// GET /repos/:owner/:repo/pulls/:number/merge
+client.repos('caarbon').repo('hub-o-matic').pulls(28).merge(callback);
+
+// PUT /repos/:owner/:repo/pulls/:number/merge
+client.repos('caarbon').repo('hub-o-matic').pulls(28).merge().put(data, callback);
+```
