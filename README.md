@@ -352,3 +352,13 @@ client.repos('caarbon').repo('hub-o-matic').issues().post(data, callback);
 // PATCH /repos/:owner/:repo/issues/:number
 client.repos('caarbon').repo('hub-o-matic').issues(456).patch(data, callback);
 ```
+
+#### [Assignees](https://developer.github.com/v3/issues/assignees/)
+
+```js
+// GET /repos/:owner/:repo/assignees
+client.repos('caarbon').repo('hub-o-matic').assignees(callback);
+
+// GET /repos/:owner/:repo/assignees/:assignee
+client.repos('caarbon').repo('hub-o-matic').assignees('tmarshall', callback);
+```
