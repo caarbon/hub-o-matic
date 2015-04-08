@@ -11,7 +11,7 @@
 var x = require('./');
 var y = x(process.env.GITHUB_TOKEN);
 
-y.repos('caarbon').repo('hub-o-matic').subscribers(function(err, body) {
+y.gists('12de1d277c837b582a7c').delete(function(err, body) {
   console.log(err);
   console.log(body);
 });
