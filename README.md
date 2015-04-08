@@ -692,3 +692,52 @@ client.repos('caarbon').repo('hub-o-matic').pulls().comments(2821).patch(data, c
 // DELETE /repos/:owner/:repo/pulls/comments/:number
 client.repos('caarbon').repo('hub-o-matic').pulls().comments(2821).delete(callback);
 ```
+
+### [Repositories](https://developer.github.com/v3/repos/)
+
+```js
+// GET /user/repos
+client.user().repos(callback);
+
+// GET /users/:username/repos
+client.users('tmarshall').repos(callback);
+
+// GET /orgs/:org/repos
+client.orgs('caarbon').repos(callback);
+
+// GET /repositories
+client.repositories(callback);
+
+// POST /user/repos
+client.user().repos().post(data, callback);
+
+// POST /orgs/:org/repos
+client.orgs('caarbon').repos().post(data, callback);
+
+// GET /repos/:owner/:repo
+client.repos('caarbon').repo('hub-o-matic', callback);
+
+// PATCH /repos/:owner/:repo
+client.repos('caarbon').repo('hub-o-matic').patch(callback);
+
+// GET /repos/:owner/:repo/contributors
+client.repos('caarbon').repo('hub-o-matic').contributors(callback);
+
+// GET /repos/:owner/:repo/languages
+client.repos('caarbon').repo('hub-o-matic').languages(callback);
+
+// GET /repos/:owner/:repo/teams
+client.repos('caarbon').repo('hub-o-matic').teams(callback);
+
+// GET /repos/:owner/:repo/tags
+client.repos('caarbon').repo('hub-o-matic').tags(callback);
+
+// GET /repos/:owner/:repo/branches
+client.repos('caarbon').repo('hub-o-matic').branches(callback);
+
+// GET /repos/:owner/:repo/branches/:branch
+client.repos('caarbon').repo('hub-o-matic').branches('fix/things', callback);
+
+// DELETE /repos/:owner/:repo
+client.repos('caarbon').repo('hub-o-matic').delete(callback);
+```
