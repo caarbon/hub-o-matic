@@ -525,3 +525,46 @@ client.orgs('caarbon', callback);
 // PATCH /orgs/:org
 client.orgs('caarbon').patch(data, callback);
 ```
+
+#### [Members](https://developer.github.com/v3/orgs/members/)
+
+```js
+// GET /orgs/:org/members
+client.orgs('caarbon').members(callback);
+
+// GET /orgs/:org/members/:username
+client.orgs('caarbon').members('tmarshall', callback);
+
+// DELETE /orgs/:org/members/:username
+client.orgs('caarbon').members('tmarshall').delete(callback);
+
+// GET /orgs/:org/public_members
+client.orgs('caarbon').publicMembers(callback);
+
+// GET /orgs/:org/public_members/:username
+client.orgs('caarbon').publicMembers('tmarshall', callback);
+
+// PUT /orgs/:org/public_members/:username
+client.orgs('caarbon').publicMembers('tmarshall').put(callback);
+
+// DELETE /orgs/:org/public_members/:username
+client.orgs('caarbon').publicMembers('tmarshall').delete(callback);
+
+// GET /orgs/:org/memberships/:username
+client.orgs('caarbon').memberships('tmarshall', callback);
+
+// PUT /orgs/:org/memberships/:username
+client.orgs('caarbon').memberships('tmarshall').put(data, callback);
+
+// DELETE /orgs/:org/memberships/:username
+client.orgs('caarbon').memberships('tmarshall').delete(callback);
+
+// GET /user/memberships/orgs
+client.user().memberships().orgs(callback);
+
+// GET /user/memberships/orgs/:org
+client.user().memberships().orgs('caarbon', callback);
+
+// PATCH /user/memberships/orgs/:org
+client.user().memberships().orgs('caarbon').patch(data, callback);
+```
