@@ -568,3 +568,55 @@ client.user().memberships().orgs('caarbon', callback);
 // PATCH /user/memberships/orgs/:org
 client.user().memberships().orgs('caarbon').patch(data, callback);
 ```
+
+#### [Teams](https://developer.github.com/v3/orgs/teams/)
+
+```js
+// GET /orgs/:org/teams
+client.orgs('caarbon').teams(callback);
+
+// GET /teams/:id
+client.orgs('caarbon').teams(2502, callback);
+
+// POST /orgs/:org/teams
+client.orgs('caarbon').teams().post(data, callback);
+
+// PATCH /teams/:id
+client.teams(2502).patch(data, callback);
+
+// DELETE /teams/:id
+client.teams(2502).delete(callback);
+
+// GET /teams/:id/members
+client.teams(2502).members(callback);
+
+// GET /teams/:id/members/:username
+client.teams(2502).members('tmarshall', callback);
+
+// PUT /teams/:id/members/:username
+client.teams(2502).members('tmarshall').put(callback);
+
+// DELETE /teams/:id/members/:username
+client.teams(2502).members('tmarshall').delete(callback);
+
+// PUT /teams/:id/memberships/:username
+client.teams(2502).memberships('tmarshall').put(callback);
+
+// DELETE /teams/:id/memberships/:username
+client.teams(2502).memberships('tmarshall').delete(callback);
+
+// GET /teams/:id/repos
+client.teams(2502).repos(callback);
+
+// GET /teams/:id/repos/:owner/:repo
+client.teams(2502).repos('caarbon').repo('hub-o-matic', callback);
+
+// PUT /teams/:id/repos/:org/:repo
+client.teams(2502).repos('caarbon').repo('hub-o-matic').put(callback);
+
+// DELETE /teams/:id/repos/:owner/:repo
+client.teams(2502).repos('caarbon').repo('hub-o-matic').delete(callback);
+
+// GET /user/teams
+client.user().teams(callback);
+```
