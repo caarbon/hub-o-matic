@@ -990,3 +990,19 @@ client.legacy().user().search('condition', callback);
 // GET /legacy/user/email/:email
 client.legacy().user().email('yo@marshall.io', callback);
 ```
+
+### [Users](https://developer.github.com/v3/users/)
+
+```js
+// GET /users/:username
+client.users('tmarshall', callback);
+
+// GET /user
+client.user(callback);
+
+// PATCH /user
+client.user().patch(data, callback);
+
+// GET /users
+client.users(callback);
+```
