@@ -846,3 +846,16 @@ client.repos('caarbon').repo('hub-o-matic').deployments(173343).statuses(callbac
 // POST /repos/:owner/:repo/deployments/:id/statuses
 client.repos('caarbon').repo('hub-o-matic').deployments(173343).statuses().post(data, callback);
 ```
+
+#### [Downloads](https://developer.github.com/v3/repos/downloads/)
+
+```js
+// GET /repos/:owner/:repo/downloads
+client.repos('caarbon').repo('hub-o-matic').downloads(callback);
+
+// GET /repos/:owner/:repo/downloads/:id
+client.repos('caarbon').repo('hub-o-matic').downloads(9429211, callback);
+
+// DELETE /repos/:owner/:repo/downloads/:id
+client.repos('caarbon').repo('hub-o-matic').downloads(9429211).delete(callback);
+```
