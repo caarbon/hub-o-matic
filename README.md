@@ -453,3 +453,12 @@ client.repos('caarbon').repo('hub-o-matic').milestones(8420).patch(data, callbac
 // DELETE /repos/:owner/:repo/milestones/:number
 client.repos('caarbon').repo('hub-o-matic').milestones(8420).delete(callback);
 ```
+
+### [Miscellaneous](https://developer.github.com/v3/misc/)
+
+#### [Emojis](https://developer.github.com/v3/emojis/)
+
+```js
+// GET /emojis
+client.emojis(callback);
+```
