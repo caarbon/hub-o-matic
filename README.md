@@ -26,10 +26,7 @@ You can call any of these, assuming they are present, to page to the next set of
 pagination.next(function(err, res, pagination) {});
 ```
 
-### API
-
-It's all about chaining
-
+### Activity
 
 #### Events
 
@@ -63,4 +60,24 @@ client.users('tmarshall').events().public(callback);
 
 // GET /users/:username/events/orgs/:org
 client.users('tmarshall').events().orgs('caarbon', callback);
+```
+
+#### Feeds
+
+```js
+// GET /feeds
+client.feeds(callback);
+```
+
+#### Notifications
+
+```js
+// GET /notifications
+client.notifications(callback);
+
+// GET /repos/:owner/:repo/notifications
+client.repos('caarbon').repo('hub-o-matic').notifications(callback);
+
+// PUT /notifications
+client.notifications.put(callback);
 ```
