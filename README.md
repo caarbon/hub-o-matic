@@ -1,4 +1,4 @@
-# Hub-o-Matic
+# Hub-o-Matic [![Circle CI](https://circleci.com/gh/caarbon/hub-o-matic.svg?style=svg)](https://circleci.com/gh/caarbon/hub-o-matic)
 
 Hub-o-Matic is a Node wrapper for the GitHub V3 API.
 
