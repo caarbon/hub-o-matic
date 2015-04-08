@@ -384,3 +384,16 @@ client.repos('caarbon').repo('hub-o-matic').issues().comments(436201).patch(data
 // DELETE /repos/:owner/:repo/issues/comments/:id
 client.repos('caarbon').repo('hub-o-matic').issues().comments(436201).delete(callback);
 ```
+
+#### [Events](https://developer.github.com/v3/issues/events/)
+
+```js
+// GET /repos/:owner/:repo/issues/:issue_number/events
+client.repos('caarbon').repo('hub-o-matic').issues(456).events(callback);
+
+// GET /repos/:owner/:repo/issues/events
+client.repos('caarbon').repo('hub-o-matic').issues().events(callback);
+
+// GET /repos/:owner/:repo/issues/events/:id
+client.repos('caarbon').repo('hub-o-matic').issues().events(8284205, callback);
+```
