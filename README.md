@@ -462,3 +462,13 @@ client.repos('caarbon').repo('hub-o-matic').milestones(8420).delete(callback);
 // GET /emojis
 client.emojis(callback);
 ```
+
+#### [Gitignore](https://developer.github.com/v3/gitignore/)
+
+```js
+// GET /gitignore/templates
+client.gitignore().templates(callback);
+
+// GET /gitignore/templates/C
+client.gitignore().templates('C', callback);
+```
