@@ -113,5 +113,11 @@ client.users('tmarshall').starred(callback);
 client.user().starred(callback);
 
 // GET /user/starred/:owner/:repo
-client.user().starred('caarbon').repo('hub-o-matic', callback);
+client.user().starred('tmarshall').repo('hub-o-matic', callback);
+
+// PUT /user/starred/:owner/:repo
+client.user().starred('tmarshall').repo('hub-o-matic').put(callback);
+
+// DELETE /user/starred/:owner/:repo
+client.user().starred('tmarshall').repo('hub-o-matic').delete(callback);
 ```
