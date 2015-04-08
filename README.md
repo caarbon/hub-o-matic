@@ -1083,3 +1083,70 @@ client.users('tmarshall').suspended().delete(callback);
 // GET /enterprise/stats/:type
 client.enterprise().stats('type', callback);
 ```
+
+### [LDAP (Enterprise 2.1)](https://developer.github.com/v3/enterprise/ldap/)
+
+```js
+// PATCH /admin/ldap/user/:username/mapping
+client.admin('ldap').user('tmarshall').mapping().patch(body, callback);
+
+// POST /admin/ldap/user/:user_id/sync
+client.admin('ldap').user('tmarshall').sync().post(callback);
+
+// PATCH /admin/ldap/teams/:team_id/mapping
+client.admin('ldap').teams(2502).mapping().patch(data, callback);
+
+// POST /admin/ldap/user/:team_id/sync
+client.admin('ldap').user(2502).sync().post(callback);
+```
+
+### [License (Enterprise 2.1)](https://developer.github.com/v3/enterprise/license/)
+
+```js
+// GET /enterprise/settings/license
+client.enterprise().settings().license(callback);
+```
+
+### [Management Console (Enterprise 2.1)](https://developer.github.com/v3/enterprise/management_console/)
+
+```js
+// POST /setup/api/start
+client.setup().api('start').post(data, callback);
+
+// POST /setup/api/upgrade
+client.setup().api('upgrade').post(data, callback);
+
+// GET /setup/api/configcheck
+client.setup().api('configcheck', callback);
+
+// POST /setup/api/configure
+client.setup().api('configure').post(data, callback);
+
+// GET /setup/api/settings
+client.setup().api('settings', callback);
+
+// PUT /setup/api/settings
+client.setup().api('settings').put(data, callback);
+
+// GET /setup/api/maintenance
+client.setup().api('maintenance', callback);
+
+// POST /setup/api/maintenance
+client.setup().api('maintenance').post(data, callback);
+
+// GET /setup/api/settings/authorized-keys
+client.setup().api().settings('authorized-keys', callback);
+
+// POST /setup/api/settings/authorized-keys
+client.setup().api().settings('authorized-keys').post(data, callback);
+
+// DELETE /setup/api/settings/authorized-keys
+client.setup().api().settings('authorized-keys').delete(data, callback);
+```
+
+### [Search Indexing (Enterprise 2.1)](https://developer.github.com/v3/enterprise/search_indexing/)
+
+```js
+// POST /staff/indexing_jobs
+client.staff('indexing_jobs').post(data, callback);
+```
