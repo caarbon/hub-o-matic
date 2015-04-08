@@ -889,3 +889,40 @@ client.repos('caarbon').repo('hub-o-matic').pages().builds(callback);
 // GET /repos/:owner/:repo/pages/builds/latest
 client.repos('caarbon').repo('hub-o-matic').pages().builds('latest', callback);
 ```
+
+#### [Releases](https://developer.github.com/v3/repos/releases/)
+
+```js
+// GET /repos/:owner/:repo/releases
+client.repos('caarbon').repo('hub-o-matic').releases(callback);
+
+// GET /repos/:owner/:repo/releases/:id
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16', callback);
+
+// GET /repos/:owner/:repo/releases/latest
+client.repos('caarbon').repo('hub-o-matic').releases('latest', callback);
+
+// GET /repos/:owner/:repo/releases/tags/:tag
+client.repos('caarbon').repo('hub-o-matic').releases().tags('v1.2.16', callback);
+
+// POST /repos/:owner/:repo/releases
+client.repos('caarbon').repo('hub-o-matic').releases().post(data, callback);
+
+// PATCH /repos/:owner/:repo/releases/:id
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').patch(data, callback);
+
+// DELETE /repos/:owner/:repo/releases/:id
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').delete(callback);
+
+// GET /repos/:owner/:repo/releases/:id/assets
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(callback);
+
+// GET /repos/:owner/:repo/releases/assets/:id
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101, callback);
+
+// PATCH /repos/:owner/:repo/releases/assets/:id
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101).patch(data, callback);
+
+// DELETE /repos/:owner/:repo/releases/assets/:id
+client.repos('caarbon').repo('hub-o-matic').releases('v1.2.16').assets(9420101).delete(callback);
+```
