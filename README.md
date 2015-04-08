@@ -434,3 +434,22 @@ client.repos('caarbon').repo('hub-o-matic').issues(456).labels().delete(callback
 // GET /repos/:owner/:repo/milestones/:number/labels
 client.repos('caarbon').repo('hub-o-matic').milestones(8420).labels(callback);
 ```
+
+#### [Milestones](https://developer.github.com/v3/issues/milestones/)
+
+```js
+// GET /repos/:owner/:repo/milestones
+client.repos('caarbon').repo('hub-o-matic').milestones(callback);
+
+// GET /repos/:owner/:repo/milestones/:number
+client.repos('caarbon').repo('hub-o-matic').milestones(8420, callback);
+
+// POST /repos/:owner/:repo/milestones
+client.repos('caarbon').repo('hub-o-matic').milestones().post(data, callback);
+
+// PATCH /repos/:owner/:repo/milestones/:number
+client.repos('caarbon').repo('hub-o-matic').milestones(8420).patch(data, callback);
+
+// DELETE /repos/:owner/:repo/milestones/:number
+client.repos('caarbon').repo('hub-o-matic').milestones(8420).delete(callback);
+```
