@@ -257,3 +257,15 @@ client.gists('6149ed2475f964cda3f5').comments(862438).patch(callback);
 // DELETE /gists/:gist_id/comments/:id
 client.gists('6149ed2475f964cda3f5').comments(862438).delete(callback);
 ```
+
+### [Git Data](https://developer.github.com/v3/git/)
+
+#### [Blobs](https://developer.github.com/v3/git/blobs/)
+
+```js
+// GET /repos/:owner/:repo/git/blobs/:sha
+client.repos('caarbon').repo('hub-o-matic').blobs().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+
+// POST /repos/:owner/:repo/git/blobs
+client.repos('caarbon').repo('hub-o-matic').blobs().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977').post(callback);
+```
