@@ -959,7 +959,7 @@ client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295a
 client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977').status(callback);
 ```
 
-#### [Search](https://developer.github.com/v3/search/)
+### [Search](https://developer.github.com/v3/search/)
 
 ```js
 // GET /search/repositories
@@ -973,4 +973,20 @@ client.search('issues', callback);
 
 // GET /search/users
 client.search('users', callback);
+```
+
+#### [Legacy Search](https://developer.github.com/v3/search/legacy/)
+
+```js
+// GET /legacy/issues/search/:owner/:repository/:state/:keyword
+client.legacy().issues().search('caarbon').repo('hub-o-matic').state('open').keyword('condition', callback);
+
+// GET /legacy/repos/search/:keyword
+client.legacy().repos().search('condition', callback);
+
+// GET /legacy/user/search/:keyword
+client.legacy().user().search('condition', callback);
+
+// GET /legacy/user/email/:email
+client.legacy().user().email('yo@marshall.io', callback);
 ```
