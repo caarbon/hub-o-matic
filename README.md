@@ -509,3 +509,19 @@ client.meta(callback);
 // GET /rate_limit
 client.rateLimit(callback);
 ```
+
+### [Organizations](https://developer.github.com/v3/orgs/)
+
+```js
+// GET /user/orgs
+client.user().orgs(callback);
+
+// GET /users/:username/orgs
+client.user('tmarshall').orgs(callback);
+
+// GET /orgs/:org
+client.orgs('caarbon', callback);
+
+// PATCH /orgs/:org
+client.orgs('caarbon').patch(data, callback);
+```
