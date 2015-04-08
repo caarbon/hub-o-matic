@@ -26,6 +26,26 @@ You can call any of these, assuming they are present, to page to the next set of
 pagination.next(function(err, res, pagination) {});
 ```
 
+### GETs
+
+In all the docs below, get requests look like
+
+```js
+client.user().subscriptions('tmarshall').repo('hub-o-matic', callback);
+```
+
+while a PUT would be something like
+
+```js
+client.user().subscriptions('tmarshall').repo('hub-o-matic').put(callback);
+```
+
+if you'd like to be consistent with the syntax, you can write the GET as
+
+```js
+client.user().subscriptions('tmarshall').repo('hub-o-matic').get(callback);
+```
+
 ### [Activity](https://developer.github.com/v3/activity/)
 
 #### [Events](https://developer.github.com/v3/activity/events/)
@@ -127,4 +147,25 @@ client.user().starred('tmarshall').repo('hub-o-matic').delete(callback);
 ```js
 // GET /repos/:owner/:repo/subscribers
 client.repos('caarbon').repo('hub-o-matic').subscribers(callback);
+
+// GET /users/:username/subscriptions
+client.users('tmarshall').subscriptions(callback);
+
+// GET /user/subscriptions
+client.user().subscriptions(callback);
+
+// GET /repos/:owner/:repo/subscription
+client.repos('caarbon').repo('hub-o-matic').subscription(callback);
+
+// PUT /repos/:owner/:repo/subscription
+client.repos('caarbon').repo('hub-o-matic').subscription.put(callback);
+
+// DELETE /repos/:owner/:repo/subscription
+client.repos('caarbon').repo('hub-o-matic').subscription.delete(callback);
+
+// GET /user/subscriptions/:owner/:repo
+client.user().subscriptions('tmarshall').repo('hub-o-matic', callback);
+
+// PUT /user/subscriptions/:owner/:repo
+client.user().subscriptions('tmarshall').repo('hub-o-matic').put(callback);
 ```
