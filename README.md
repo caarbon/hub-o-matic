@@ -779,3 +779,16 @@ client.repos('caarbon').repo('hub-o-matic').comments(862438).patch(data, callbac
 // DELETE /repos/:owner/:repo/comments/:id
 client.repos('caarbon').repo('hub-o-matic').comments(862438).delete(callback);
 ```
+
+#### [Commits](https://developer.github.com/v3/repos/commits/)
+
+```js
+// GET /repos/:owner/:repo/commits
+client.repos('caarbon').repo('hub-o-matic').commits(callback);
+
+// GET /repos/:owner/:repo/commits/:sha
+client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+
+// GET /repos/:owner/:repo/compare/:base...:head
+client.repos('caarbon').repo('hub-o-matic').compare(':base...:head', callback);
+```
