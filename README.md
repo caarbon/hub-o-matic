@@ -1013,3 +1013,31 @@ client.user('emails').post(data, callback);
 // DELETE /user/emails
 client.user('emails').delete(data, callback);
 ```
+
+### [Followers](https://developer.github.com/v3/users/followers/)
+
+```js
+// GET /users/:username/followers
+client.users('tmarshall').followers(callback);
+
+// GET /user/followers
+client.user().followers(callback);
+
+// GET /users/:username/following
+client.users('tmarshall').following(callback);
+
+// GET /user/following
+client.user().following(callback);
+
+// GET /user/following/:username
+client.user().following('constantx', callback);
+
+// GET /users/:username/following/:target_user
+client.users('tmarshall').following('constantx', callback);
+
+// PUT /user/following/:username
+client.user().following('constantx').put(callback);
+
+// DELETE /user/following/:username
+client.user().following('constantx').delete(callback);
+```
