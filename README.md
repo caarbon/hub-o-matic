@@ -26,9 +26,9 @@ You can call any of these, assuming they are present, to page to the next set of
 pagination.next(function(err, res, pagination) {});
 ```
 
-### Activity
+### [Activity](https://developer.github.com/v3/activity/)
 
-#### Events
+#### [Events](https://developer.github.com/v3/activity/events/)
 
 ```js
 // GET /events
@@ -62,14 +62,14 @@ client.users('tmarshall').events().public(callback);
 client.users('tmarshall').events().orgs('caarbon', callback);
 ```
 
-#### Feeds
+#### [Feeds](https://developer.github.com/v3/activity/feeds/)
 
 ```js
 // GET /feeds
 client.feeds(callback);
 ```
 
-#### Notifications
+#### [Notifications](https://developer.github.com/v3/activity/notifications/)
 
 ```js
 // GET /notifications
@@ -98,4 +98,20 @@ client.notifications().threads('threadid').subscription().put(data, callback);
 
 // DELETE /notifications/threads/:id/subscription
 client.notifications().threads('threadid').subscription().delete(callback);
+```
+
+#### [Starring](https://developer.github.com/v3/activity/starring/)
+
+```js
+// GET /repos/:owner/:repo/stargazers
+client.repos('caarbon').repo('hub-o-matic').stargazers(callback);
+
+// GET /users/:username/starred
+client.users('tmarshall').starred(callback);
+
+// GET /user/starred
+client.user().starred(callback);
+
+// GET /user/starred/:owner/:repo
+client.user().starred('caarbon').repo('hub-o-matic', callback);
 ```
