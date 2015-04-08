@@ -495,3 +495,10 @@ client.markdown().post(data, callback);
 // POST /markdown/raw
 client.markdown('raw').post(data, callback);
 ```
+
+#### [Meta](https://developer.github.com/v3/meta/)
+
+```js
+// GET /meta
+client.meta(callback);
+```
