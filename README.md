@@ -670,3 +670,25 @@ client.repos('caarbon').repo('hub-o-matic').pulls(28).merge(callback);
 // PUT /repos/:owner/:repo/pulls/:number/merge
 client.repos('caarbon').repo('hub-o-matic').pulls(28).merge().put(data, callback);
 ```
+
+#### [Review Comments](https://developer.github.com/v3/pulls/comments/)
+
+```js
+// GET /repos/:owner/:repo/pulls/:number/comments
+client.repos('caarbon').repo('hub-o-matic').pulls(28).comments(callback);
+
+// GET /repos/:owner/:repo/pulls/comments
+client.repos('caarbon').repo('hub-o-matic').pulls().comments(callback);
+
+// GET /repos/:owner/:repo/pulls/comments/:number
+client.repos('caarbon').repo('hub-o-matic').pulls().comments(2821, callback);
+
+// POST /repos/:owner/:repo/pulls/:number/comments
+client.repos('caarbon').repo('hub-o-matic').pulls(28).comments().post(data, callback);
+
+// PATCH /repos/:owner/:repo/pulls/comments/:number
+client.repos('caarbon').repo('hub-o-matic').pulls().comments(2821).patch(data, callback);
+
+// DELETE /repos/:owner/:repo/pulls/comments/:number
+client.repos('caarbon').repo('hub-o-matic').pulls().comments(2821).delete(callback);
+```
