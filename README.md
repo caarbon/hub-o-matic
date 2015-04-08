@@ -958,3 +958,19 @@ client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295a
 // GET /repos/:owner/:repo/commits/:ref/status
 client.repos('caarbon').repo('hub-o-matic').commits('2c92055c4467fe31bd321f6295ad6953b6f1f977').status(callback);
 ```
+
+#### [Search](https://developer.github.com/v3/search/)
+
+```js
+// GET /search/repositories
+client.search('repositories', callback);
+
+// GET /search/code
+client.search('code', callback);
+
+// GET /search/issues
+client.search('issues', callback);
+
+// GET /search/users
+client.search('users', callback);
+```
