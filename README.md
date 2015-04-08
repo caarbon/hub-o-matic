@@ -304,3 +304,25 @@ client.repos('caarbon').repo('hub-o-matic').git().refs('skunkworkz/feature').del
 // DELETE /repos/:owner/:repo/git/refs/tags/:id
 client.repos('caarbon').repo('hub-o-matic').git().refs().tags(862438).delete(callback);
 ```
+
+#### [Tags](https://developer.github.com/v3/git/tags/)
+
+```js
+// GET /repos/:owner/:repo/git/tags/:sha
+client.repos('caarbon').repo('hub-o-matic').git().tags().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+
+// POST /repos/:owner/:repo/git/tags
+client.repos('caarbon').repo('hub-o-matic').git().tags().post(callback);
+```
+
+#### [Trees](https://developer.github.com/v3/git/trees/)
+```js
+// GET /repos/:owner/:repo/git/trees/:sha
+client.repos('caarbon').repo('hub-o-matic').git().trees().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977', callback);
+
+// GET /repos/:owner/:repo/git/trees/:sha?recursive=1
+client.repos('caarbon').repo('hub-o-matic').git().trees().sha('2c92055c4467fe31bd321f6295ad6953b6f1f977').get({ recursive: 1 }, callback);
+
+// POST /repos/:owner/:repo/git/trees
+client.repos('caarbon').repo('hub-o-matic').git().trees().post(data, callback);
+```
