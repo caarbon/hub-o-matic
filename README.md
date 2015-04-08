@@ -362,3 +362,25 @@ client.repos('caarbon').repo('hub-o-matic').assignees(callback);
 // GET /repos/:owner/:repo/assignees/:assignee
 client.repos('caarbon').repo('hub-o-matic').assignees('tmarshall', callback);
 ```
+
+#### [Comments](https://developer.github.com/v3/issues/comments/)
+
+```js
+// GET /repos/:owner/:repo/issues/:number/comments
+client.repos('caarbon').repo('hub-o-matic').issues(456).comments(callback);
+
+// GET /repos/:owner/:repo/issues/comments
+client.repos('caarbon').repo('hub-o-matic').issues().comments(callback);
+
+// GET /repos/:owner/:repo/issues/comments/:id
+client.repos('caarbon').repo('hub-o-matic').issues().comments(436201, callback);
+
+// POST /repos/:owner/:repo/issues/:number/comments
+client.repos('caarbon').repo('hub-o-matic').issues(456).comments().post(data, callback);
+
+// PATCH /repos/:owner/:repo/issues/comments/:id
+client.repos('caarbon').repo('hub-o-matic').issues().comments(436201).patch(data, callback);
+
+// DELETE /repos/:owner/:repo/issues/comments/:id
+client.repos('caarbon').repo('hub-o-matic').issues().comments(436201).delete(callback);
+```
