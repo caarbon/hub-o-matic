@@ -741,3 +741,19 @@ client.repos('caarbon').repo('hub-o-matic').branches('fix/things', callback);
 // DELETE /repos/:owner/:repo
 client.repos('caarbon').repo('hub-o-matic').delete(callback);
 ```
+
+#### [Collaborators](https://developer.github.com/v3/repos/collaborators/)
+
+```js
+// GET /repos/:owner/:repo/collaborators
+client.repos('caarbon').repo('hub-o-matic').collaborators(callback);
+
+// GET /repos/:owner/:repo/collaborators/:username
+client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall', callback);
+
+// PUT /repos/:owner/:repo/collaborators/:username
+client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall').put(callback);
+
+// DELETE /repos/:owner/:repo/collaborators/:username
+client.repos('caarbon').repo('hub-o-matic').collaborators('tmarshall').delete(callback);
+```
