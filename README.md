@@ -1041,3 +1041,22 @@ client.user().following('constantx').put(callback);
 // DELETE /user/following/:username
 client.user().following('constantx').delete(callback);
 ```
+
+### [Public Keys](https://developer.github.com/v3/users/keys/)
+
+```js
+// GET /users/:username/keys
+client.users('tmarshall').keys(callback);
+
+// GET /user/keys
+client.user().keys(callback);
+
+// GET /user/keys/:id
+client.user().keys('290420', callback);
+
+// POST /user/keys
+client.user().keys().post(data, callback);
+
+// DELETE /user/keys/:id
+client.user().keys('290420').delete(callback);
+```
