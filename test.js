@@ -11,7 +11,7 @@
 var x = require('./');
 var y = x(process.env.GITHUB_TOKEN);
 
-y.users('tmarshall').events().public(function(err, body) {
+y.notifications(function(err, body) {
   console.log(err);
   console.log(body);
 });

@@ -85,19 +85,19 @@ client.notifications().put(callback);
 client.repos('caarbon').repo('hub-o-matic').notifications().put(callback);
 
 // GET /notifications/threads/:id
-client.notifications().threads('threadid', callback);
+client.notifications().threads(63832640, callback);
 
 // PATCH /notifications/threads/:id
-client.notifications().threads('threadid', callback).patch(callback);
+client.notifications().threads(63832640, callback).patch(callback);
 
 // GET /notifications/threads/:id/subscription
-client.notifications().threads('threadid').subscription(callback);
+client.notifications().threads(63832640).subscription(callback);
 
 // PUT /notifications/threads/:id/subscription
-client.notifications().threads('threadid').subscription().put(data, callback);
+client.notifications().threads(63832640).subscription().put(data, callback);
 
 // DELETE /notifications/threads/:id/subscription
-client.notifications().threads('threadid').subscription().delete(callback);
+client.notifications().threads(63832640).subscription().delete(callback);
 ```
 
 #### [Starring](https://developer.github.com/v3/activity/starring/)
