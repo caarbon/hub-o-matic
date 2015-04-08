@@ -859,3 +859,13 @@ client.repos('caarbon').repo('hub-o-matic').downloads(9429211, callback);
 // DELETE /repos/:owner/:repo/downloads/:id
 client.repos('caarbon').repo('hub-o-matic').downloads(9429211).delete(callback);
 ```
+
+#### [Forks](https://developer.github.com/v3/repos/forks/)
+
+```js
+// GET /repos/:owner/:repo/forks
+client.repos('caarbon').repo('hub-o-matic').forks(callback);
+
+// POST /repos/:owner/:repo/forks
+client.repos('caarbon').repo('hub-o-matic').forks().post(data, callback);
+```
