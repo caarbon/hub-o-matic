@@ -485,3 +485,13 @@ client.licenses('mit', callback);
 // GET /repos/:owner/:repo
 client.repos('caarbon').repo('hub-o-matic', callback);
 ```
+
+#### [Markdown](https://developer.github.com/v3/markdown/)
+
+```js
+// POST /markdown
+client.markdown().post(data, callback);
+
+// POST /markdown/raw
+client.markdown('raw').post(data, callback);
+```
